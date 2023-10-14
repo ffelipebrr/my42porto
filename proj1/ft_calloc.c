@@ -6,7 +6,7 @@
 /*   By: francgom <francgom@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 15:16:12 by francgom          #+#    #+#             */
-/*   Updated: 2023/10/14 16:03:22 by francgom         ###   ########.fr       */
+/*   Updated: 2023/10/14 18:12:05 by francgom         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,10 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*p;
 
-	if (!nmemb)
-		return (0);
-	p = (void *) malloc(nmemb * size);
-	if (p)
-		ft_bzero (p, nmemb * size);
+	p = malloc(nmemb * size);
+	if (!p)
+		return (NULL);
+	ft_bzero (p, nmemb * size);
 	return (p);
 }
 
