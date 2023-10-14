@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ffelipebrr <ffelipebrr@student.42.fr>      +#+  +:+       +#+        */
+/*   By: francgom <francgom@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/08 18:28:05 by ffelipebrr        #+#    #+#             */
-/*   Updated: 2023/10/08 22:14:56 by ffelipebrr       ###   ########.fr       */
+/*   Created: 2023/10/06 16:50:54 by francgom          #+#    #+#             */
+/*   Updated: 2023/10/11 20:33:46 by francgom         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,22 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
-
-	i = 0;
-	if ((unsigned char)c == '\0')
-		return ((char *)s + ft_strlen(s));
-	while (s[i] != '\0')
+	while (*s || (unsigned char)c <= '\0')
 	{
-		if (s[i] == (unsigned char)c)
-			return ((char *)s + i);
-		i++;
+		if (*s == (unsigned char)c)
+			return ((char *)s);
+		s++;
 	}
 	return (0);
 }
+
+// #include <stdio.h>
+// int main(void)
+// {
+// 	char	palavra[]="ABCDEFGH";
+// 	char* p;
+// 	p = ft_strchr(palavra,'t'+256);
+// 	printf("%s\n",palavra);
+// 	printf("%p\n",palavra+2);
+// 	printf("%p\n",p);
+// }
