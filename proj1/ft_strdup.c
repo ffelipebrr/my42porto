@@ -10,16 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
-// char	*strdup(const char *s)
-// {
-// 	char	*dup;
-// 	int		len;
-	
-// 	if (!s)
-// 		return (0);
-// 	len = ft_strlen(s);
-// 	dup = (char *) malloc(len+1);
-	
-// }
+char	*ft_strdup(const char *s)
+{
+	char	*dup;
+	int		len;
+
+	len = ft_strlen(s);
+	dup = (char *) malloc(len + 1);
+	if (!dup)
+		return (0);
+	ft_memcpy(dup, s, len + 1);
+	return (dup);
+}
