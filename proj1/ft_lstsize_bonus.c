@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 15:27:37 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/19 15:46:19 by codespace        ###   ########.fr       */
+/*   Created: 2023/10/22 11:15:27 by codespace         #+#    #+#             */
+/*   Updated: 2023/10/22 11:23:42 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_lstsize(t_list *lst)
 {
-	unsigned int	nbr;
+	int		i;
 
-	nbr = n;
-	if (n < 0)
+	i = 0;
+	while (lst)
 	{
-		nbr = -n;
-		ft_putchar_fd('-', fd);
+		lst = lst -> next;
+		i++;
 	}
-	while (nbr >= 10)
-	{
-		ft_putnbr_fd(nbr / 10, fd);
-		nbr = nbr % 10;
-	}
-	ft_putchar_fd(nbr + '0', fd);
+	return (i);
 }

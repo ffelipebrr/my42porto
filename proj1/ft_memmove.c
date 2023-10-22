@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 15:27:37 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/19 15:46:19 by codespace        ###   ########.fr       */
+/*   Created: 2023/10/20 09:42:40 by codespace         #+#    #+#             */
+/*   Updated: 2023/10/22 09:34:11 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned int	nbr;
+	char	*buff;
+	char	*nsrc;
 
-	nbr = n;
-	if (n < 0)
+	buff = (char *) dest;
+	nsrc = (char *) src;
+	if (dest == src)
+		return (dest);
+	if (nsrc < buff)
 	{
-		nbr = -n;
-		ft_putchar_fd('-', fd);
+		while (n--)
+			*(buff + n) = *(nsrc + n);
+		return (dest);
 	}
-	while (nbr >= 10)
-	{
-		ft_putnbr_fd(nbr / 10, fd);
-		nbr = nbr % 10;
-	}
-	ft_putchar_fd(nbr + '0', fd);
+	while (n--)
+		*buff++ = *nsrc++;
+	return (dest);
 }

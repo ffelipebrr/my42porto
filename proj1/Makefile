@@ -1,19 +1,24 @@
-NAME = libft.a
-C_SOURCE = $(wildcard ft_*.c)
-OBJ = $(C_SOURCE:.c=.o)
-FLAG = -Wall -Wextra -Werror
+SRCS	= $(filter-out $(wildcard *_bonus.c), $(wildcard *.c))
+BONUS_SRCS	= $(wildcard *_bonus.c)
+BONUS_OBJS	= $(BONUS_SRCS:.c=.o)
+OBJS	= $(SRCS:.c=.o)
+CFLAGS	= -Wall -Wextra -Werror
+NAME	= libft.a
 
 all: $(NAME)
 
-$(NAME):
-	cc $(FLAG) -c $(C_SOURCE)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+$(NAME): $(OBJS)
+	ar rc $(NAME) $(OBJS)
 
 clean:
-	@rm -rf $(OBJ)
+	$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
-re: fclean all
+re: fclean $(NAME)
+
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rc $(NAME) $(OBJS) $(BONUS_OBJS)
+
+.PHONY: all clean fclean re bonus
