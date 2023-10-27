@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 16:19:25 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/25 15:22:22 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/25 17:39:46 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,7 +116,7 @@ char	**ft_split(char const *s, char c)
 		words[i] = ft_get_word(s, c, i, words[i]);
 		i++;
 	}
-	words[i] = '\0';
+	words[i] = NULL;
 	return (words);
 }
 
@@ -138,27 +138,27 @@ TESTA O VER TAMANHO DE PALAVRAS: ft_len_word
 // 		i++;
 // 	}
 // }
-/*
-TESTA GET_WORD
-*/
-#include <stdio.h>
-int main(int argc, char *argv[])
-{
-	int i = 0;
-	(void)argv;
-	char *p = argv[1];
-	char *pp;
-	char c = argv[2][0];
-	printf("numero de palavras: %i\n",ft_count_word(p,c));
-	while (i < ft_count_word(p,c))
-	{
-		pp = (char *)malloc(ft_len_word(p,c,i)+1);
-		printf("PALAVRA CAPTURADA: %s\n",ft_get_word(p, c, i, pp));
-		free(pp);
-		i++;
-	}
-}
 // /*
+// TESTA GET_WORD
+// */
+// #include <stdio.h>
+// int main(int argc, char *argv[])
+// {
+// 	int i = 0;
+// 	(void)argv;
+// 	char *p = argv[1];
+// 	char *pp;
+// 	char c = argv[2][0];
+// 	printf("numero de palavras: %i\n",ft_count_word(p,c));
+// 	while (i < ft_count_word(p,c))
+// 	{
+// 		pp = (char *)malloc(ft_len_word(p,c,i)+1);
+// 		printf("PALAVRA CAPTURADA: %s\n",ft_get_word(p, c, i, pp));
+// 		free(pp);
+// 		i++;
+// 	}
+// }
+// // /*
 // FINALMENTE TESTA A SPLIT
 // */
 // #include <stdio.h>
@@ -177,4 +177,3 @@ int main(int argc, char *argv[])
 // 		i++;
 // 	}
 // }
-
