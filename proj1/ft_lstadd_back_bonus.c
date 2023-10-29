@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 12:01:53 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/27 10:11:32 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/29 11:40:04 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 // {
 // 	if (lst != NULL)
 // 	{
-// 		printf("lst.content: %s\n", (char *)lst->content);
+// 		printf("lst.content: %c\n", *(char *)lst->content);
 // 		imprimir(lst->next);
 // 	}	
 // }
@@ -41,8 +41,11 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 // {
 // 	t_list	*no1;
 // 	t_list	*no2;
+// 	char	num;
+// 	num = 65;
 // 	no1 = ft_lstnew("EU");
-// 	no2 = ft_lstnew("MAMAE");
+// 	no2 = ft_lstnew(&num);
+// 	printf("\n%p\n", &num);
 // 	ft_lstadd_back(&no1,no2);
 // 	ft_lstadd_back(&no1,ft_lstnew("PAPAI"));
 // 	printf("     MINHA FILA\n");

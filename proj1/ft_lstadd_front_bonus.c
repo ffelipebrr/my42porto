@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 10:40:08 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/27 10:08:42 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/29 11:39:18 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 // 	{
 // 		printf("ID: %d\n", ((Student *)no1->content)->id);
 // 		printf("NOME: %s\n", ((Student *)no1->content)->name);
+// 		free(no1);
 // 		no1 = no1->next;
 // 	}
-// 	free(no1);
 // }

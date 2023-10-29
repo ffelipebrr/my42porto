@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 21:02:46 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/25 21:12:31 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/29 11:39:32 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,17 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		tmp_lst = tmp_lst -> next;
 	}
 }
+
+// #include <stdio.h>
+// void imprimir(t_list mylist)
+// {
+// 	if (mylist != NULL)
+// 		printf("%s",(char *)mylist->content);
+// 	imprimir(mylist->next);
+// }
+// int main(void)
+// {
+// 	t_list	no1;
+// 	no1 =ft_lstnew("acaBAcQs");
+// 	ft_lstadd_back(&no1,ft_lstnew("QEAssaQsasEG"));
+// }
