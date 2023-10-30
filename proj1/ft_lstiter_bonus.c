@@ -27,15 +27,32 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 }
 
 // #include <stdio.h>
-// void imprimir(t_list mylist)
+// void imprimir(t_list *lst)
 // {
-// 	if (mylist != NULL)
-// 		printf("%s",(char *)mylist->content);
-// 	imprimir(mylist->next);
+// 	 while (lst)
+//     {
+//         printf("%s\n", lst->content);
+//         lst = lst->next;
+//     }
+// }
+// void to_uppercase(void *content)
+// {
+// 	int	i = 0;
+// 	char *str = (char *)content;
+// 	while (str[i] != '\0')
+// 	{
+// 		str[i] = ft_toupper(str[i]);
+// 		i++;
+// 	}
 // }
 // int main(void)
 // {
-// 	t_list	no1;
-// 	no1 =ft_lstnew("acaBAcQs");
-// 	ft_lstadd_back(&no1,ft_lstnew("QEAssaQsasEG"));
+// 	t_list	*list;
+// 	list = ft_lstnew(ft_strdup("asdEFkjkAVXD"));
+// 	ft_lstadd_front(&list,ft_lstnew(ft_strdup("asascaww")));
+// 	printf("\nnANTES\n");
+// 	imprimir(list);
+// 	printf("\nnDepois\n");
+// 	ft_lstiter(list,to_uppercase);
+// 	imprimir(list);
 // }
