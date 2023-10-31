@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 15:12:12 by codespace         #+#    #+#             */
-/*   Updated: 2023/10/30 22:23:31 by codespace        ###   ########.fr       */
+/*   Updated: 2023/10/30 23:07:45 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ int		ft_putnbr_base_u(unsigned long nbr, char *base);
 int		ft_print_s(char *arg);
 int		ft_print_c(char arg);
 int		ft_print_i_d(int arg);
-int		ft_print_u(int arg);
+int		ft_print_p(unsigned long arg);
 
 #endif

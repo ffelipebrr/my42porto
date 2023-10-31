@@ -1,25 +1,19 @@
-NAME = libftprintf.a
+SRCS	= $(wildcard ./ft_*.c)
+OBJS	= $(SRCS:.c=.o)
+CFLAGS	= -Wall -Wextra -Werror
+NAME	= libftprintf.a
 
-CC = cc
-CFLAGS = -Wall -Wextra -Werror
-AR = ar rc
-RM = rm -fr
-FILES = *.c
-OBJS = *.o
-MAIN = main.c
-
-all: fclean $(NAME) clean
+all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(AR) $(NAME) $(OBJS)
-	
-$(OBJS): $(FILES)
-	@$(CC) $(CFLAGS) -c $(FILES)
+	ar rc $(NAME) $(OBJS)
 
 clean:
-	@$(RM) $(OBJS)
+	$(RM) $(OBJS)
 
-fclean:
-	@$(RM) $(OBJS) $(NAME)
+fclean: clean
+	$(RM) $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re
