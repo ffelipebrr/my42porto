@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 /*
-A função strncmp retorna um valor inteiro que indica a dirença entre as duas
+A função strncmp retorna um valor inteiro que indica a diferença entre as duas
 strings até um número máximo "n" de caracteres a serem comparados.
 */
 
