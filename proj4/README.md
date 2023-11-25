@@ -8,13 +8,16 @@
 4. [Instalação do SSH 🛜](#4-instalação-do-ssh-)
 
 	4.1 [Configuração do SSH](#41-configuração-do-ssh)
+
 	4.2 [Realizando uma conexão SSH](#42-realizando-uma-conexão-ssh)
 
 5. [Criação de Usuarios e Grupos 👤👥](#5-criação-de-usuarios-e-grupos-)
 6. [Implementando política de senha forte 🔑](#6-implementando-política-de-senha-forte-)
 
 	6.1 [Característica temporal da senha](#61-característica-temporal-da-senha)
+
 	6.2 [Carecterística textual da senha](#62-carecterística-textual-da-senha)
+	
 	6.3 [Adicionando mais segurança para o Sudo](#63-adicionando-mais-segurança-para-o-sudo)
 
 7. [Criação de Script 📜](#7-criação-de-script-)
