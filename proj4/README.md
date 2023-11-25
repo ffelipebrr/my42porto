@@ -24,14 +24,14 @@
 
 
 ## 1. Criação da Maquina Virtual 💻
----
+
 ## 2. Instalação do Debian 💽
----
+
 ## 3. Instalação do UFW 🔥🧱
 <p>**UFW** é uma ferramenta de configuração de firewall, que é um dispositivo de segurança de rede que cuida do trafego de informações bloqueando ou permitindo passagens de dados dependendo das regras configuradas.</p>
 
 **3.1** Instale o UFW utilizando o comando ```sudo apt install ufw``` e confirme com ```y```.<br>
-<img alt="Teste" src="ufw00.png">
+<img alt="Teste" width=70% src="./img/ufw00.png">
 
 **3.2.** Ative o UFW 
 ```bash
@@ -50,9 +50,7 @@ systemctl enable ufw
 ```bash
 sudo ufw status
 ```
-<img alt="Teste" src="ufw01.png">
-
----
+<img alt="Teste" width=70%  src="./img/ufw01.png">
 
 ## 4. Instalação do SSH 🛜
 ### 4.1. Configuração do SSH
@@ -70,7 +68,7 @@ sudo systemctl enable sshd
 ```bash
 sudo vim /etc/ssh/sshd_config
 ```
-<img alt="Teste" src="ssh0.png">
+<img alt="Teste" width=70%  src="./img/ssh0.png">
 
 **4.1.4.** Reiniciando o servico
 ```bash
@@ -80,7 +78,7 @@ sudo systemctl restart sshd
 ```bash
 sudo sudo service ssh status
 ```
-<img alt="Teste" src="ssh1.png">
+<img alt="Teste" width=70%  src="./img/ssh1.png">
 
 ### 4.2. Realizando uma conexão SSH
 **4.2.1.** Verifique qual é o IP da sua maquina virtual
@@ -91,10 +89,10 @@ ip address
 ```bash
 ssh <seu usuário>@<seu ip> -p 4242
 ```
----
+
 
 ## 5. Criação de Usuarios e Grupos 👤👥
----
+
 ## 6. Implementando política de senha forte 🔑
 ### 6.1 Característica temporal da senha
 Edite o arquivo ```/etc/login.defs/``` alterando as seguintes flags
@@ -107,7 +105,7 @@ Edite o arquivo ```/etc/login.defs/``` alterando as seguintes flags
 ```bash
 sudo sudo vim /etc/login.defs/
 ```
-<img alt="Teste" src="pass00.png">
+<img alt="Teste" width=70%  src="./img/pass00.png">
 
 ### 6.2 Carecterística textual da senha
 **6.2.1** Instalar o pacote adicional **libpam-pwquality**
@@ -130,7 +128,7 @@ sudo apt install libpam-pwquality
 ```bash
 sudo sudo vim /etc/security/pwquality.conf
 ```
-<img alt="Teste" src="pass00.png">
+<img alt="Teste" width=70%  src="./img/pass00.png">
 
 ### 6.3 Adicionando mais segurança para o Sudo
 Edite o arquivo ```/etc/sudoers```
@@ -147,13 +145,13 @@ Edite o arquivo ```/etc/sudoers```
 ```bash
 sudo sudo vim /etc/sudoers
 ```
-<img alt="Teste" src="pass02.png">
+<img alt="Teste" width=70%  src="./img/pass02.png">
 
----
+
 
 ## 7. Criação de Script 📜
----
+
 ## 8. Contrab ⏰
----
+
 ## 9. Instalação de um servidor web 🖥
 *O Lighttpd* é um servidor web de código aberto e de alta performance. Ele foi projetado para ser rápido, seguro, flexível e eficiente em termos de uso de recursos, sendo uma alternativa popular ao Apache ou Nginx.
