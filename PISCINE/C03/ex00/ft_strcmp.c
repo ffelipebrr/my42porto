@@ -6,11 +6,10 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 08:50:29 by codespace         #+#    #+#             */
-/*   Updated: 2023/11/11 10:53:26 by codespace        ###   ########.fr       */
+/*   Updated: 2023/11/11 11:01:03 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
 /*
 A função strncmp retorna um valor inteiro que indica a dirença entre as duas
 strings s1 e s2.
